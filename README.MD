@@ -10,7 +10,9 @@
 - **Elements**
   - [001 Text Boxes](#001-text-boxes)
   - [002 Radio Buttons](#002-radio-buttons)
-  - [003 Check Boxes](#002-check-boxes)
+  - [003 Check Boxes](#003-check-boxes)
+  - [004 Dynamic Properties](#004-dynamic-properties)
+
 
 
 # Challenge Description Images
@@ -20,4 +22,6 @@
 ## 002 Radio Buttons
 [![002-radio-buttons](./challenges/002-radio-buttons.png "002 Challenge Radio Buttons")](./challenges/002-radio-buttons.png)
 ## 003 Check Boxes
-[![002-radio-buttons](./challenges/003-check-boxes.png "003 Challenge Check Boxes")](./challenges/003-check-boxes.png)
+[![003-check-boxes](./challenges/003-check-boxes.png "003 Challenge Check Boxes")](./challenges/003-check-boxes.png)
+## 004 Dynamic Properties
+[![004-dynamic-properties](./challenges/004-dynamic-properties.png "004 Challenge Dynamic Properties")](./challenges/004-dynamic-properties.png)
