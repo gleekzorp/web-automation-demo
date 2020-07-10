@@ -6,13 +6,18 @@
 > The challenges are completed in class as a group, solo, and homework
 
 # Current Challenges
-
-- [001 Text Boxes](#001-text-boxes)
-- [002 Radio Buttons](#002-radio-buttons)
+> website we tested against: https://demoqa.com
+- **Elements**
+  - [001 Text Boxes](#001-text-boxes)
+  - [002 Radio Buttons](#002-radio-buttons)
+  - [003 Check Boxes](#002-check-boxes)
 
 
 # Challenge Description Images
+
 ## 001 Text Boxes
 [![001-text-boxes](./challenges/001-text-box.png "001 Challenge Text Boxes")](./challenges/001-text-box.png)
 ## 002 Radio Buttons
-[![002-radio-buttons](./challenges/002-radio-buttons.png "001 Challenge Radio Buttons")](./challenges/002-radio-buttons.png)
+[![002-radio-buttons](./challenges/002-radio-buttons.png "002 Challenge Radio Buttons")](./challenges/002-radio-buttons.png)
+## 003 Check Boxes
+[![002-radio-buttons](./challenges/003-check-boxes.png "003 Challenge Check Boxes")](./challenges/003-check-boxes.png)
