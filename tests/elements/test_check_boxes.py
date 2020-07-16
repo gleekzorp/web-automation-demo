@@ -62,5 +62,15 @@ def test_checkboxes_expand_all_check_any_collapse_all_expand_all(py):
         'rct-icon rct-icon-half-check')
 
 
+def test_check_random_elements(py):
+    py.visit('https://demoqa.com/checkbox')
+    checkbox_list = ['notes', 'react', 'general']
+    py.getx('//button[@title="Expand all"]').click()
+    for item in checkbox_list:
+        print(item)
+        checkbox_page.check_checkbox(py, item)
+
+
+
 # '//label[@for="tree-node-home"]/../button'
 # '//span[@class="rct-text"]/button'
