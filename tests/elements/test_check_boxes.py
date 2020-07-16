@@ -1,8 +1,14 @@
+import pytest
+
 from pages import checkbox_page
 
 
-def test_checkboxes(py):
+@pytest.fixture
+def demo_qa(py):
     py.visit('https://demoqa.com/checkbox')
+
+
+def test_checkboxes(py, demo_qa):
     py.getx('//label[@for="tree-node-home"]/../button').click()
     py.getx('//label[@for="tree-node-desktop"]/../button').click()
     commands = py.get('#tree-node-commands')
@@ -21,8 +27,7 @@ def test_checkboxes(py):
         'rct-icon rct-icon-half-check')
 
 
-def test_checkboxes_refactor(py):
-    py.visit('https://demoqa.com/checkbox')
+def test_checkboxes_refactor(py, demo_qa):
     checkbox_page.toggle(py, "home")
     checkbox_page.toggle(py, "desktop")
     checkbox_page.check_checkbox(py, "commands")
@@ -34,8 +39,7 @@ def test_checkboxes_refactor(py):
         'rct-icon rct-icon-half-check')
 
 
-def test_checkboxes_expand_all(py):
-    py.visit('https://demoqa.com/checkbox')
+def test_checkboxes_expand_all(py, demo_qa):
     py.getx('//button[@title="Expand all"]').click()
     py.get('#tree-node-commands').click(force=True)
 
@@ -46,8 +50,7 @@ def test_checkboxes_expand_all(py):
         'rct-icon rct-icon-half-check')
 
 
-def test_checkboxes_expand_all_check_any_collapse_all_expand_all(py):
-    py.visit('https://demoqa.com/checkbox')
+def test_checkboxes_expand_all_check_any_collapse_all_expand_all(py, demo_qa):
     py.getx('//button[@title="Expand all"]').click()
     py.get('#tree-node-react').click(force=True)
     checkbox_page.toggle(py, "home")
@@ -56,14 +59,13 @@ def test_checkboxes_expand_all_check_any_collapse_all_expand_all(py):
     assert py.get('.text-success').should().have_text('react')
     assert py.getx('//label[@for="tree-node-home"]//*[name()="svg"]').should().have_class(
         'rct-icon rct-icon-half-check')
-    assert py.getx('//label[@for="tree-node-documents"]//*[name()="svg"]').should().have_class(
-        'rct-icon rct-icon-half-check')
+    assert "half-check" in py.getx('//label[@for="tree-node-documents"]//*[name()="svg"]').get_attribute('class')
+    # OR
     assert py.getx('//label[@for="tree-node-workspace"]//*[name()="svg"]').should().have_class(
         'rct-icon rct-icon-half-check')
 
 
-def test_check_random_elements(py):
-    py.visit('https://demoqa.com/checkbox')
+def test_check_random_elements(py, demo_qa):
     checkbox_list = ['notes', 'react', 'general']
     py.getx('//button[@title="Expand all"]').click()
     for item in checkbox_list:
