@@ -31,8 +31,6 @@ def test_file_download(py, demo_qa):
     # assert os.path.isfile(f"{DOWNLOAD_PATH}/{file_name}")
 
 
-# https://stackoverflow.com/questions/2323128/convert-string-in-base64-to-image-and-save-on-filesystem-in-python
-# https://stackoverflow.com/questions/6269765/what-does-the-b-character-do-in-front-of-a-string-literal/6269785
 def test_file_download_no_clicky(py, demo_qa):
     DOWNLOAD_PATH = '/Users/gleek/Downloads'
     download_button = py.get('#downloadButton')
@@ -51,3 +49,10 @@ def test_file_download_no_clicky(py, demo_qa):
 
     assert file
     # assert os.path.isfile(f"{DOWNLOAD_PATH}/{file_name}")
+
+
+# Websites that helped me
+# https://stackoverflow.com/questions/2323128/convert-string-in-base64-to-image-and-save-on-filesystem-in-python
+# https://stackoverflow.com/questions/6269765/what-does-the-b-character-do-in-front-of-a-string-literal/6269785
+# https://effbot.org/zone/python-with-statement.htm
+# https://www.geeksforgeeks.org/with-statement-in-python/
