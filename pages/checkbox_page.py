@@ -1,4 +1,4 @@
-from pylenium import Pylenium
+from pylenium.driver import Pylenium
 
 
 def check_checkbox(py: Pylenium, element: str):
